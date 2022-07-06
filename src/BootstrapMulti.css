@@ -1,0 +1,44 @@
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: #8ecb2f;
+  border-radius: 5px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: #7ac400;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #7ac400;
+  padding: 7px 14px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #7ac400;
+  color: white;
+  cursor: pointer;
+  transition: background-color ease 1s;
+}
