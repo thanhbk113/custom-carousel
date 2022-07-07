@@ -4,21 +4,30 @@ import "slick-carousel/slick/slick-theme.css";
 import "./carouse.css";
 import { multiData } from "./data";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+let slidesToShow = 5;
 
 const PreviousBtn = (props) => {
-  const { className, onClick } = props;
+  const { className, onClick, currentSlide } = props;
   return (
-    <div className={className} onClick={onClick}>
-      <ArrowBackIos style={{ color: "blue" }} />
-    </div>
+    <>
+      {currentSlide !== 0 && (
+        <div className={className} onClick={onClick}>
+          <ArrowBackIos style={{ color: "blue" }} />
+        </div>
+      )}
+    </>
   );
 };
 const NextBtn = (props) => {
-  const { className, onClick } = props;
+  const { className, onClick, slideCount, currentSlide } = props;
   return (
-    <div className={className} onClick={onClick}>
-      <ArrowForwardIos style={{ color: "blue" }} />
-    </div>
+    <>
+      {currentSlide !== slideCount - slidesToShow && (
+        <div className={className} onClick={onClick}>
+          <ArrowForwardIos style={{ color: "blue" }} />
+        </div>
+      )}
+    </>
   );
 };
 
@@ -67,10 +76,9 @@ const MultiItemCarouse = () => {
       <Slider
         prevArrow={<PreviousBtn />}
         nextArrow={<NextBtn />}
-        slidesToShow={3}
-        // slidesToScroll={3}
-        // infinite={false}
-        centerPadding="100px"
+        slidesToShow={5}
+        slidesToScroll={2}
+        infinite={false}
         responsive={carouseProperties.responsive}
       >
         {multiData.map((item) => (

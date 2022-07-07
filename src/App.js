@@ -10,7 +10,7 @@ export default function App() {
     <div className="App">
       {/* <Carouse /> */}
       <MultiItemCarouse />
-      <Ipl />
+      {/* <Ipl /> */}
       {/* <BootstrapMultiCarouse /> */}
       {/* <Testimonial /> */}
     </div>
