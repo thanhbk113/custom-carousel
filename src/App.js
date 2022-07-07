@@ -1,16 +1,18 @@
-// import BootstrapMultiCarouse from "./BootstrapMulti";
-// import Carouse from "./Carouse";
-// import MultiItemCarouse from "./MultiItemCarousel";
+import BootstrapMultiCarouse from "./BootstrapMulti";
+import Carouse from "./Carouse";
+import Ipl from "./Ipl";
+import MultiItemCarouse from "./MultiItemCarousel";
 import "./styles.css";
 import Testimonial from "./Testimonial";
 
 export default function App() {
   return (
     <div className="App">
-      {/* <Carouse />
+      {/* <Carouse /> */}
       <MultiItemCarouse />
-      <BootstrapMultiCarouse /> */}
-      <Testimonial />
+      <Ipl />
+      {/* <BootstrapMultiCarouse /> */}
+      {/* <Testimonial /> */}
     </div>
   );
 }

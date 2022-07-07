@@ -1,0 +1,24 @@
+.line-indicator li {
+    height: 4px;
+    width: 70px;
+    background-color: lightgray ;
+}
+
+.line-indicator li:hover {
+    background-color: gray;
+}
+
+.line-indicator li.slick-active {
+    background-color: blue;
+}
+
+.slider-button:hover {
+    transform:  scale(1.1);
+    transition: 700ms;
+}
+
+
+.slider-button {
+    background-color: orangered !important;
+    color: white ;
+}

@@ -19,7 +19,7 @@
 .BootstrapMulti .slick-arrow.slick-next {
   right: -50px;
 }
-button {
+.BootstrapMulti button {
   outline: none;
   border: none;
   color: #7ac400;
@@ -32,7 +32,7 @@ button {
   margin: 10px 0;
   text-transform: uppercase;
 }
-button:hover {
+.BootstrapMulti button:hover {
   background: #7ac400;
   color: white;
   cursor: pointer;

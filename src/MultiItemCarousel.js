@@ -22,15 +22,56 @@ const NextBtn = (props) => {
   );
 };
 
+const carouseProperties = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  nextArrow: <NextBtn />,
+  prevArrow: <PreviousBtn />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 const MultiItemCarouse = () => {
   return (
-    <div style={{ margin: "30px" }}>
+    <div className="multiItemCarousel" style={{ margin: "30px" }}>
       <Slider
         prevArrow={<PreviousBtn />}
         nextArrow={<NextBtn />}
-        slidesToShow={4}
-        slidesToScroll={3}
-        infinite={false}
+        slidesToShow={3}
+        // slidesToScroll={3}
+        // infinite={false}
+        centerPadding="100px"
+        responsive={carouseProperties.responsive}
       >
         {multiData.map((item) => (
           <div>
@@ -54,7 +95,7 @@ const Card = ({ item }) => {
           width: "100%",
           height: "170px",
           objectFit: "contain",
-          marginBottom: "10px"
+          marginBottom: "10px",
         }}
       />
       <p style={{ fontSize: "14px", padding: "5px 0" }}>TOP TRENDING TV</p>
